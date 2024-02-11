@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Register section -->
+    <div class="form-container mt-16">
+      <form class="register max-w-md mx-auto bg-blue-100 shadow-md rounded px-8 pt-6 pb-8 mb-4" action="" method="post" enctype="multipart/form-data" onsubmit="return handleRegisterSubmit(this);">
+        <h2 class="mt-4 mb-5 text-center text-2xl font-bold leading-9 tracking-tight text-blue-500">Create Account</h2>
+  
+        <div class="flex flex-wrap -mx-5 mb-3">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="name">Your Name</label>
+            <input class="appearance-none block w-full bg-white-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" name="name" type="text" placeholder="Enter your name" maxlength="50" required>
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="email">Your Email</label>
+            <input class="appearance-none block w-full bg-white-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="emailRegister" name="email" type="email" placeholder="Enter your email" maxlength="20" required>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="password">Your Password</label>
+            <input class="appearance-none block w-full bg-white-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="passwordRegister" name="password" type="password" placeholder="Enter your password" maxlength="20" required>
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="cpass">Confirm Password</label>
+            <input class="appearance-none block w-full bg-white-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="cpass" name="cpass" type="password" placeholder="Confirm your password" maxlength="20" required>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="role">Select Role</label>
+          <select class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-white-500 text-lg" id="role" name="role" required>
+            <option value="">Select your role</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="image">Select Photo</label>
+          <input class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-white-500" id="image" name="image" type="file" accept="image/*" required>
+        </div>
+        <p class="text-center text-gray-700 text-sm mb-6">Already have an account? <a href="index.html" class="text-indigo-600 font-semibold">Login now</a></p>
+        <input type="submit" name="submit" value="Register now" class="button-primary w-full py-2 text-sm font-semibold bg-blue-800 text-white hover:bg-blue-100" style="background-color: #1D4ED8; color: #FFFFFF;" onmouseover="this.style.backgroundColor='#FDE68A';" onmouseout="this.style.backgroundColor='#1D4ED8';">
+      </form>
+    </div>
+  </body>
+  
+  
+
+
+<script>
+
+function handleRegisterSubmit(form) {
+    // Prevent duplicate form submission
+    form.querySelector('button[type="submit"]').disabled = true;
+    return true; // You can also return false to prevent form submission in certain cases
+  }
+
+  
+
+</script>
+
+
+</html>
