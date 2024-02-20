@@ -16,56 +16,8 @@
 <body class="flex h-screen bg-white">
 
   <!-- Sidebar -->
-  <aside class="w-64 bg-white border-gray-400 flex flex-col justify-between h-screen">
-    <!-- Sidebar Content -->
-    <div>
-      <div class="profile p-8 text-center">
-        <img src="images/pic_7.jpg" class="h-20 w-20 rounded-full object-cover mx-auto mb-2">
-        <h3 class="text-xl text-black">Samira Dabbah</h3>
-        <p class="text-gray-500">Student</p>
-        <a href="#" class="btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-2 block">View Profile</a>
-      </div>
-      <nav class="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-gray-700">
-        <a href="StudentHome.html"
-          class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
-          <div class="grid place-items-center mr-4">
-            <i class="fas fa-home text-blue-500"></i>
-          </div>
-          Home
-        </a>
-        <a href="StudentAboutUs.html"
-          class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
-          <div class="grid place-items-center mr-4">
-            <i class="fas fa-question text-blue-500"></i>
-          </div>
-          About
-        </a>
-        <a href="SudentCourses.html"
-          class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
-          <div class="grid place-items-center mr-4">
-            <i class="fas fa-graduation-cap text-blue-500"></i>
-          </div>
-          Courses
-        </a>
-        <a href="StudentContactUs.html"
-          class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
-          <div class="grid place-items-center mr-4">
-            <i class="fas fa-headset text-blue-500"></i>
-          </div>
-          Contact Us
-        </a>
-      </nav>
-    </div>
+  <student-sidebar-component></student-sidebar-component>
 
-    <!-- Adjusted Logout Button -->
-    <div class="px-4 pb-4">
-      <a href="index.html" onclick="return confirm('Are you sure you want to log out?');"
-        class="flex items-center justify-center bg-red-500 hover:bg-red-700 text-white p-2 rounded-lg transition-colors duration-150 ease-in-out">
-        <i class="fas fa-sign-out-alt text-sm"></i>
-        <span class="ml-2 text-sm">Logout</span>
-      </a>
-    </div>
-  </aside>
 
 
 
@@ -205,7 +157,7 @@
     </footer>
   </div>
 
-
+  <script src="MainJsTest.js"></script>
 </body>
 
 </html>
