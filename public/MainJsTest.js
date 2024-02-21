@@ -169,13 +169,15 @@ class PageHeaderComponent extends HTMLElement {
 class PageFooterComponent extends HTMLElement {
   connectedCallback() {
       this.innerHTML = `
-      <footer class="bg-white p-4 border-t-2 border-gray-400 text-center">
+      <footer class="bg-white p-4 border-t-2  border-gray-400 text-center">
       <!-- Footer Content -->
       <p>&copy; 2024 LMS. All rights reserved.</p>
     </footer>
     `;
   }
 }
+
+
 
 
 function showNotImplementedAlert() {
@@ -188,3 +190,8 @@ customElements.define('page-footer-component', PageFooterComponent);
 customElements.define('page-header-component', PageHeaderComponent);
 customElements.define('lecturer-sidebar-component', LecturerSidebarComponent);
 customElements.define('student-sidebar-component', StudentSidebarComponent);
+
+
+document.getElementById('createCourseBtn').addEventListener('click', function() {
+  window.location.href = 'LecturerHome.html';
+})
