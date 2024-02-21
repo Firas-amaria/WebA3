@@ -194,4 +194,22 @@ customElements.define('student-sidebar-component', StudentSidebarComponent);
 
 document.getElementById('createCourseBtn').addEventListener('click', function() {
   window.location.href = 'LecturerHome.html';
-})
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const videoSection = document.querySelector('.playlist-videos .grid');
+
+  // Handler for removing a video card
+  videoSection.addEventListener('click', function(event) {
+      if (event.target.classList.contains('fa-times')) {
+          event.target.closest('div.relative').remove();
+      }
+  });
+
+  // Handler for adding a new video card
+  // Note: This is a placeholder and should be replaced with your actual video adding logic
+  videoSection.querySelector('.fa-plus').parentNode.addEventListener('click', function() {
+      alert('Add new video functionality not implemented.');
+  });
+});
