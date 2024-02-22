@@ -43,7 +43,7 @@ class LecturerSidebarComponent extends HTMLElement {
               2</a>
           </div>
           <!--add a create course page page?-->
-          <a href="javascript:void(0);" onclick="showNotImplementedAlert();"
+          <a href="LecturerCreateCourses.html" 
             class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
             <div class="grid place-items-center mr-4">
               <i class="fas fa-plus-circle text-blue-500"></i>
@@ -131,12 +131,85 @@ class StudentSidebarComponent extends HTMLElement {
   }
 }
 
+class PageHeaderComponent extends HTMLElement {
+  connectedCallback() {
+      this.innerHTML = `
+      <header class="bg-white p-1 border-b-2 border-gray-400">
+      <!-- Header Content -->
+      <div class="flex items-center justify-between border-b border-gray-300 p-4">
+        <a href="LecturerHome.html" class="text-xl text-black font-semibold">LMS.</a>
+        <div class="relative mx-auto text-gray-600">
+          <input class="border-2 border-gray-300 bg-white h-8 px-3 pr-16 rounded-lg text-sm focus:outline-none"
+            type="search" name="search" placeholder="Search">
+          <button type="submit" class="absolute right-0 top-0 mt-2 mr-2">
+            <svg class="text-gray-600 h-3 w-3 fill-current" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+              viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+              width="512px" height="512px">
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div id="user-btn" class="text-xl cursor-pointer">
+            <i class="fas fa-user"></i>
+          </div>
+          <div id="toggle-btn" class="text-xl cursor-pointer">
+            <i class="fas fa-moon"></i>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    `;
+  }
+}
+
+class PageFooterComponent extends HTMLElement {
+  connectedCallback() {
+      this.innerHTML = `
+      <footer class="bg-white p-4 border-t-2  border-gray-400 text-center">
+      <!-- Footer Content -->
+      <p>&copy; 2024 LMS. All rights reserved.</p>
+    </footer>
+    `;
+  }
+}
+
 
 
 
 function showNotImplementedAlert() {
     alert("Not yet implemented");
 }
+
 // Define the new element
+customElements.define('page-footer-component', PageFooterComponent);
+
+customElements.define('page-header-component', PageHeaderComponent);
 customElements.define('lecturer-sidebar-component', LecturerSidebarComponent);
 customElements.define('student-sidebar-component', StudentSidebarComponent);
+
+
+document.getElementById('createCourseBtn').addEventListener('click', function() {
+  window.location.href = 'LecturerHome.html';
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const videoSection = document.querySelector('.playlist-videos .grid');
+
+  // Handler for removing a video card
+  videoSection.addEventListener('click', function(event) {
+      if (event.target.classList.contains('fa-times')) {
+          event.target.closest('div.relative').remove();
+      }
+  });
+
+  // Handler for adding a new video card
+  // Note: This is a placeholder and should be replaced with your actual video adding logic
+  videoSection.querySelector('.fa-plus').parentNode.addEventListener('click', function() {
+      alert('Add new video functionality not implemented.');
+  });
+});
