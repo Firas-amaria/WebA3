@@ -61,6 +61,30 @@ function triggerFileUpload() {
     fileInput.click(); // Trigger the file input dialog
 }
 
+document.getElementById('editButton').addEventListener('click', function() {
+    let title = document.getElementById('courseTitle');
+    let description = document.getElementById('courseDescription');
+
+    if (this.innerText === "Edit") {
+        // Replace title with an input box
+        let titleInput = `<input type="text" id="titleInput" class="text-2xl text-blue-500 capitalize w-full  bg-gray-200" value="${title.innerText}">`;
+        title.innerHTML = titleInput;
+
+        // Replace description with a textarea
+        let descTextarea = `<textarea id="descInput" class=" leading-2 text-1.8xl text-light-color w-full bg-gray-200">${description.innerText}</textarea>`;
+        description.innerHTML = descTextarea;
+
+        this.innerText = "Save";
+    } else {
+        // Save the edited values and revert back to text display
+        title.innerText = document.getElementById('titleInput').value;
+        description.innerText = document.getElementById('descInput').value;
+
+        this.innerText = "Edit";
+    }
+});
+
+
 
 // Call renderVideosCards function to generate cards on page load
 document.addEventListener('DOMContentLoaded', renderVideosCards);
