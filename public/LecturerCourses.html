@@ -31,8 +31,8 @@
         <!-- Main Content -->
         <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
 
-            <div class="flex items-center">
-                <h1 class="heading text-2xl text-gray-700 mb-5 border-b border-gray-700 pb-3"> Syllabus details</h1>
+            <div class="flex items-center border-b border-black mb-5 pb-3">
+                <h1 class="heading text-2xl text-gray-700 "> Syllabus details</h1>
                 <a
                     class="inline-btn  bg-blue-500 border-b border-gray-700 hover:bg-blue-600 hover:shadow-md text-white py-2 px-4 rounded pb-2 cursor-pointer -mt-7 ml-auto">Edit</a>
             </div>
@@ -64,67 +64,16 @@
             </section>
 
             <!-- Playlist Video -->
-            <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center justify-between  border-b border-black mb-5 pb-3">
                 <h1 class="text-2xl text-gray-700">Playlist Video</h1>
-                <button class="bg-blue-500 text-white py-2 px-4 rounded">Edit</button>
             </div>
             <section class="playlist-videos">
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-8">
-                    <div class="relative bg-white rounded-md p-8 group">
-                        <button class="absolute top-0 left-0 mt-2 ml-2 text-red-500 opacity-100 group-hover:opacity-300 hover:border-red-600">
-                            <i class="fas fa-times"></i>
-                        </button>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Video Title Here</h3>
-                    </div>
-
-                    <a href="#"
-                        class="box relative bg-white rounded-md p-8 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                        <i class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32  bg-opacity-30 flex items-center justify-center text-6xl text-gray-300  fas fa-play"></i>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Complete Cloud Computing Tutorial (part 02)</h3>
-                    </a>
-
-                    <a href="#"
-                        class="box relative bg-white rounded-md p-8 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                        <i
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32  bg-opacity-30 flex items-center justify-center text-6xl text-gray-300  fas fa-play"></i>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Complete Cloud Computing Tutorial (part 03)</h3>
-                    </a>
-                </div>
-
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-8">
-                    <a href="#"
-                        class="box relative bg-white rounded-md p-8 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                        <i
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32  bg-opacity-30 flex items-center justify-center text-6xl text-gray-300  fas fa-play"></i>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Complete Cloud Computing Tutorial (part 04)</h3>
-                    </a>
-
-                    <a href="#"
-                        class="box relative bg-white rounded-md p-8 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                        <i
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32  bg-opacity-30 flex items-center justify-center text-6xl text-gray-300  fas fa-play"></i>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Complete Cloud Computing Tutorial (part 05)</h3>
-                    </a>
-
-                    <a href="#"
-                        class="box relative bg-white rounded-md p-8 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                        <i
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32  bg-opacity-30 flex items-center justify-center text-6xl text-gray-300  fas fa-play"></i>
-                        <img src="images/course_5.jpg" alt="" class="w-full h-96 object-cover rounded-md">
-                        <h3 class="mt-6 text-3xl text-black">Complete Cloud Computing Tutorial (part 06)</h3>
-                    </a>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-8" id="VideoContainerCourses"></div>
 
                 <!-- assignments -->
-                <div class="flex items-center">
-                    <h1 class="heading text-2xl text-gray-700 mb-5 border-b border-gray-700 pb-3"> assignments</h1>
+                <div class="flex items-center mb-5 border-b border-gray-700 pb-3">
+                    <h1 class="heading text-2xl text-gray-700 "> assignments</h1>
                     <a
                         class="inline-btn  bg-blue-500 border-b border-gray-700 hover:bg-blue-600 hover:shadow-md text-white py-2 px-4 rounded pb-2 cursor-pointer -mt-7 ml-auto">Edit</a>
                 </div>
@@ -160,7 +109,7 @@
     </div>
 
     <script src="PageAutomation.js"></script>
-
+    <script src="LecturerCourse.js"></script>
 </body>
 
 </html>
