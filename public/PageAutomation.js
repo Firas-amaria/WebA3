@@ -18,12 +18,12 @@ class LecturerSidebarComponent extends HTMLElement {
             Home
           </a>
           <!--add a about us page?-->
-          <a href="LecturerAboutUs.html"
+          <a href="AboutUs.html"
             class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
             <div class="grid place-items-center mr-4">
               <i class="fas fa-question text-blue-500"></i>
             </div>
-            About
+            About Us
           </a>
   
           <div
@@ -51,7 +51,7 @@ class LecturerSidebarComponent extends HTMLElement {
             Create Course
           </a>
           <!--add a contact us page?-->
-          <a href="LecturerContactUs.html"
+          <a href="ContactUs.html"
             class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
             <div class="grid place-items-center mr-4">
               <i class="fas fa-headset text-blue-500"></i>
@@ -94,12 +94,12 @@ class StudentSidebarComponent extends HTMLElement {
               </div>
               Home
             </a>
-            <a href="StudentAboutUs.html"
+            <a href="AboutUs.html"
               class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
               <div class="grid place-items-center mr-4">
                 <i class="fas fa-question text-blue-500"></i>
               </div>
-              About
+              About Us
             </a>
             <a href="SudentCourses.html"
               class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
@@ -108,7 +108,7 @@ class StudentSidebarComponent extends HTMLElement {
               </div>
               Courses
             </a>
-            <a href="StudentContactUs.html"
+            <a href="ContactUs.html"
               class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
               <div class="grid place-items-center mr-4">
                 <i class="fas fa-headset text-blue-500"></i>
