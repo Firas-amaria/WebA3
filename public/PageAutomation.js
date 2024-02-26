@@ -1,6 +1,6 @@
 class LecturerSidebarComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <aside class="w-64 bg-white border-gray-400 flex flex-col justify-between h-screen">
       <!-- Sidebar Content -->
       <div>
@@ -23,7 +23,7 @@ class LecturerSidebarComponent extends HTMLElement {
             <div class="grid place-items-center mr-4">
               <i class="fas fa-question text-blue-500"></i>
             </div>
-            About
+            About Us
           </a>
   
           <div
@@ -70,13 +70,13 @@ class LecturerSidebarComponent extends HTMLElement {
       </div>
     </aside>
       `;
-    }
+  }
 }
 
 
 class StudentSidebarComponent extends HTMLElement {
   connectedCallback() {
-      this.innerHTML = `
+    this.innerHTML = `
       <!-- Sidebar -->
       <aside class="w-64 bg-white border-gray-400 flex flex-col justify-between h-screen">
         <!-- Sidebar Content -->
@@ -99,7 +99,7 @@ class StudentSidebarComponent extends HTMLElement {
               <div class="grid place-items-center mr-4">
                 <i class="fas fa-question text-blue-500"></i>
               </div>
-              About
+              About Us
             </a>
             <a href="SudentCourses.html"
               class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
@@ -133,7 +133,7 @@ class StudentSidebarComponent extends HTMLElement {
 
 class PageHeaderComponent extends HTMLElement {
   connectedCallback() {
-      this.innerHTML = `
+    this.innerHTML = `
       <header class="bg-white p-1 border-b-2 border-gray-400">
       <!-- Header Content -->
       <div class="flex items-center justify-between border-b border-gray-300 p-4">
@@ -168,7 +168,7 @@ class PageHeaderComponent extends HTMLElement {
 
 class PageFooterComponent extends HTMLElement {
   connectedCallback() {
-      this.innerHTML = `
+    this.innerHTML = `
       <footer class="bg-white p-4 border-t-2  border-gray-400 text-center">
       <!-- Footer Content -->
       <p>&copy; 2024 LMS. All rights reserved.</p>
@@ -181,7 +181,7 @@ class PageFooterComponent extends HTMLElement {
 
 
 function showNotImplementedAlert() {
-    alert("Not yet implemented");
+  alert("Not yet implemented");
 }
 
 // Define the new element
@@ -192,24 +192,24 @@ customElements.define('lecturer-sidebar-component', LecturerSidebarComponent);
 customElements.define('student-sidebar-component', StudentSidebarComponent);
 
 
-document.getElementById('createCourseBtn').addEventListener('click', function() {
+document.getElementById('createCourseBtn').addEventListener('click', function () {
   window.location.href = 'LecturerHome.html';
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const videoSection = document.querySelector('.playlist-videos .grid');
 
   // Handler for removing a video card
-  videoSection.addEventListener('click', function(event) {
-      if (event.target.classList.contains('fa-times')) {
-          event.target.closest('div.relative').remove();
-      }
+  videoSection.addEventListener('click', function (event) {
+    if (event.target.classList.contains('fa-times')) {
+      event.target.closest('div.relative').remove();
+    }
   });
 
   // Handler for adding a new video card
   // Note: This is a placeholder and should be replaced with your actual video adding logic
-  videoSection.querySelector('.fa-plus').parentNode.addEventListener('click', function() {
-      alert('Add new video functionality not implemented.');
+  videoSection.querySelector('.fa-plus').parentNode.addEventListener('click', function () {
+    alert('Add new video functionality not implemented.');
   });
 });

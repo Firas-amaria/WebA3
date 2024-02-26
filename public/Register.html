@@ -7,15 +7,26 @@
   <title>Register</title>
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
+
 <body>
+
   <!-- Register section -->
   <div class="form-container mt-16">
-    <form class="register max-w-md mx-auto bg-blue-100 shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#" method="post"
+  <!-- Button for Dark/Light Mode Toggle -->
+  <div class="flex justify-end mb-4">
+    <button id="toggle-btn" class="text-blue-500 dark:text-yellow-500 hover:text-blue-600 dark:hover:text-yellow-600 focus:outline-none">
+        <i class="fas fa-moon"></i> <!-- Font Awesome moon icon -->
+    </button>
+</div>
+    <form id="RegisterForm" class="register max-w-md mx-auto bg-blue-100 shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#" method="post"
       enctype="multipart/form-data" onsubmit="return handleRegisterSubmit(this);">
+    
       <h2 class="mt-4 mb-5 text-center text-2xl font-bold leading-9 tracking-tight text-blue-500">Create Account</h2>
-
       <div class="flex flex-wrap -mx-5 mb-3">
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label class="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" for="name">Your Name</label>
@@ -67,39 +78,14 @@
       <p class="text-center text-gray-700 text-sm mb-6">Already have an account? <a href="index.html"
           class="text-indigo-600 font-semibold">Login now</a></p>
       
-      <button type="submit" name="submit"
-        class="flex w-full justify-center rounded-md bg-blue-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Register Now</button>
+          <button type="button"
+          class="flex w-full justify-center rounded-md bg-blue-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Register Now</button>
+  
     </form>
   </div>
+
 </body>
-
-
-
-
-<script>
-
-  function handleRegisterSubmit(form) {
-    // Prevent duplicate form submission
-    form.querySelector('button[type="submit"]').disabled = true;
-    // You can also return false to prevent form submission in certain cases
-    const userType = form.querySelector('#role').value;
-
-    // Redirect based on the selected user type
-    if (userType === 'lecturer') {
-      // Redirect to lecturer page
-      window.location.href = 'LecturerHome.html';
-    } else if (userType === 'student') {
-      // Redirect to student page
-      window.location.href = 'StudentHome.html';
-    }
-
-    // Return false to prevent the form from submitting (since we're redirecting manually)
-    return false;
-  }
-
-
-
-</script>
+<script type="module" src="/main.js"></script>
 
 
 </html>
