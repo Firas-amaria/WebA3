@@ -16,7 +16,7 @@ function generateVideoCard(video) {
                 <i class="fas fa-times"></i>
             </button>
             <i class="fas fa-play absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32 bg-opacity-30 flex items-center justify-center text-6xl text-gray-300"></i>
-            <img src="${video.image}" alt="" class="w-70 h-70 object-cover rounded-md">
+            <img src="${video.image}" alt="" class="w-full h-80 object-cover rounded-md">
             <div class="flex justify-between items-end">
                 <h3 class="text-3xl text-black">${video.name}</h3>
                 <button class="text-blue-500 text-2xl">
