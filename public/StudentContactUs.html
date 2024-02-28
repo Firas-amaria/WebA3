@@ -22,47 +22,11 @@
 
   <!-- Sidebar -->
   <student-sidebar-component></student-sidebar-component>
-
-
-
-
-
   <!-- Main Content Container -->
   <div class="flex-1 flex flex-col overflow-hidden bg-ashen border border-gray-400">
 
     <!-- Header -->
-    <header class="bg-white p-1 border-b-2 border-gray-400">
-      <!-- Header Content -->
-      <div class="flex items-center justify-between border-b border-gray-300 p-4">
-        <a href="StudentHome.html" class="text-xl text-black font-semibold">LMS.</a>
-        <div class="relative mx-auto text-gray-600">
-          <input class="border-2 border-gray-300 bg-white h-8 px-3 pr-16 rounded-lg text-sm focus:outline-none"
-            type="search" name="search" placeholder="Search">
-          <button type="submit" class="absolute right-0 top-0 mt-2 mr-2">
-            <svg class="text-gray-600 h-3 w-3 fill-current" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-              viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
-              width="512px" height="512px">
-              <path
-                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-            </svg>
-          </button>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div id="user-btn" class="text-xl cursor-pointer">
-            <i class="fas fa-user"></i>
-          </div>
-          <div id="toggle-btn" class="text-xl cursor-pointer">
-            <i class="fas fa-moon"></i>
-          </div>
-
-        </div>
-      </div>
-    </header>
-
-
-
-
+    <student-header-component></student-header-component>
 
     <!-- Main Content -->
     <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
@@ -73,27 +37,30 @@
       </div>
       <section class="contact_us bg-white p-8 mb-8 max-w-screen-xl mx-auto relative">
 
-
+        <div class="icon-box bg-blue-600 text-white w-6 h-6 absolute flex items-center justify-center p-5 -left-10">
+          <i class="fas fa-arrow"></i>
+        </div>
+    
         <form action="" class="form relative z-10">
-
-          <h3 class="text-2xl text-gray-900 font-semibold">Get In Touch for LMS Assistance</h3>
-          <p class="text-gray-600">Reach out to us for everything you need to know about LMS</p>
-          <div class="flex space-x-5 mt-3">
-            <input type="text" name="" id="" placeholder="Your Name" class="border p-2 w-1/2">
-            <input type="tel" name="" id="" placeholder="Your Number" class="border p-2 w-1/2">
-          </div>
-          <input type="email" name="" id="" placeholder="Your Email" class="border p-2 w-full mt-3">
-          <textarea name="" id="" cols="10" rows="3" placeholder="Tell us about your desired LMS education"
-            class="border p-2 mt-3 w-full"></textarea>
-          <p class="font-bold text-sm mt-3">GDPR Agreement *</p>
-          <div class="flex items-baseline space-x-2 mt-2">
-            <input type="checkbox" name="" id="" class="inline-block">
-            <p class="text-gray-600 text-sm">I consent to having this website store my submitted information so
-              they can respond to my inquiry.</p>
-          </div>
-          <button type="submit"
-            class="w-full mt-6 bg-blue-500 hover:bg-blue-700 text-white font-semibold p-3 text-blue-100 transition duration-300">Submit</button>
-        </form>
+    
+            <h3 class="text-2xl text-gray-900 font-semibold">Get In Touch for LMS Assistance</h3>
+            <p class="text-gray-600">Reach out to us for everything you need to know about LMS</p>
+            <div class="flex space-x-5 mt-3">
+                <input type="text" name="" id="" placeholder="Your Name" class="border p-2 w-1/2">
+                <input type="tel" name="" id="" placeholder="Your Number" class="border p-2 w-1/2">
+            </div>
+            <input type="email" name="" id="" placeholder="Your Email" class="border p-2 w-full mt-3">
+            <textarea name="" id="" cols="10" rows="3" placeholder="Tell us about your desired LMS education"
+                class="border p-2 mt-3 w-full"></textarea>
+            <p class="font-bold text-sm mt-3">GDPR Agreement *</p>
+            <div class="flex items-baseline space-x-2 mt-2">
+                <input type="checkbox" name="" id="" class="inline-block">
+                <p class="text-gray-600 text-sm">I consent to having this website store my submitted information so
+                    they can respond to my inquiry.</p>
+            </div>
+            <button type="submit"
+                class="w-full mt-6 bg-blue-500 hover:bg-blue-700 text-white font-semibold p-3 text-blue-100 transition duration-300">Submit</button>
+          </form>
       </section>
 
       <div class="container mx-auto">
@@ -148,11 +115,11 @@
 
     <!-- Footer -->
     <page-footer-component></page-footer-component>
-
-    <script src="PageAutomation.js"></script>
   </div>
+  <script src="PageAutomation.js"></script>
+  <script src="TestFile.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
-<script type="module" src="/main.js"></script>
 
 
 </html>
