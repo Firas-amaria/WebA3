@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student assignment</title>
+    <title>assignments</title>
     <!-- Include Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Include Font Awesome CDN -->
@@ -18,34 +18,31 @@
     <!-- Sidebar -->
     <lecturer-sidebar-component></lecturer-sidebar-component>
 
+
+
+
     <!-- Main Content Container -->
     <div class="flex-1 flex flex-col overflow-hidden bg-ashen border border-gray-400">
 
         <!-- Header -->
         <lecturer-header-component></lecturer-header-component>
 
+
         <!-- Main Content -->
         <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
-            <h1 id="myCourses" class="heading text-2xl text-gray-700 mb-5 border-b border-gray-700 pb-3">student name:             id:</h1>
-            <div class="mt-8">
-                <h2 class="text-lg text-red-700 mb-3">the homework from mongodp</h2>
-                <h2 class="text-lg text-gray-800 mb-3">Lecturer's Review & Mark Submission</h2>
-                
-                <!-- Review Text Area -->
-                <textarea class="w-full h-40 border border-gray-400 rounded-lg px-4 py-2 mb-3" placeholder="Enter your review here..."></textarea>
-                
-                <!-- Mark Input -->
-                <input type="number" class="w-1/4 border border-gray-400 rounded-lg px-4 py-2 mb-3 mr-4" placeholder="Enter mark...">
-                
-                <!-- Submit Button -->
-                <button class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-lg">Submit</button>
-            </div>
+            <h1 id="myCourses" class="heading text-2xl text-gray-700 mb-5 border-b border-gray-700 pb-3">Assignment name</h1>
+                <a href="AssignmentCheck.html">
+                    <button class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-lg ">View from mongodb</button>
+                  </a>
 
 
         </main>
 
         <!-- Footer -->
-        <page-footer-component></page-footer-component>
+        <footer class="bg-white p-4 border-t-2 border-gray-400 text-center">
+            <!-- Footer Content -->
+            <p>&copy; 2024 LMS. All rights reserved.</p>
+        </footer>
     </div>
 
     <script src="PageAutomation.js"></script>
